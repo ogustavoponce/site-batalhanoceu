@@ -7,10 +7,15 @@
 
 :root {
     --primary-color: #D4AF37; /* Dourado */
-    --dark-color: #1a1a1a;    /* Preto profundo */
-    --light-color: #ffffff;   /* Branco */
-    --text-color: #333333;    /* Cor do texto principal */
-    --light-gray: #f4f4f4;   /* Cinza claro para fundos */
+    
+    /* --- CORES DO TEMA DARK --- */
+    --background-color: #1a1a1a; /* Fundo principal (preto profundo) */
+    --card-background: #222222;  /* Fundo para seções como o formulário */
+    --text-color: #e0e0e0;       /* Cor do texto principal (branco suave) */
+    --heading-color: #ffffff;     /* Cor para os títulos maiores (H1) */
+    --border-color: #333333;     /* Cor para bordas sutis */
+    --dark-text-on-gold: #1a1a1a; /* Texto escuro para botões dourados */
+
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -21,7 +26,7 @@ html {
 
 body {
     font-family: var(--font-body);
-    background-color: var(--light-color);
+    background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.7;
 }
@@ -30,7 +35,7 @@ body {
 .cta-button-main {
     display: inline-block;
     background-color: var(--primary-color);
-    color: var(--dark-color);
+    color: var(--dark-text-on-gold);
     padding: 1rem 2.5rem;
     text-decoration: none;
     font-weight: 700;
@@ -42,7 +47,7 @@ body {
 
 .cta-button-main:hover {
     transform: translateY(-3px);
-    background-color: #c8a430; /* Dourado um pouco mais escuro */
+    background-color: #c8a430;
 }
 
 .cta-button-main.inverted {
@@ -51,20 +56,21 @@ body {
 }
 .cta-button-main.inverted:hover {
     background-color: var(--primary-color);
-    color: var(--dark-color);
+    color: var(--dark-text-on-gold);
 }
 
 h2 {
     font-family: var(--font-heading);
     font-size: 2.8rem;
-    color: var(--dark-color);
+    color: var(--primary-color); /* MUDANÇA: Títulos principais em dourado */
     margin-bottom: 1rem;
 }
 
 /* ---- CABEÇALHO E NAVEGAÇÃO ---- */
 header {
-    background-color: var(--light-color);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background-color: rgba(26, 26, 26, 0.85); /* Fundo escuro semi-transparente */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
     position: fixed;
     width: 100%;
     top: 0;
@@ -106,8 +112,8 @@ header {
 
 .cta-button-header {
     display: inline-block;
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: var(--primary-color);
+    color: var(--dark-text-on-gold);
     padding: 0.6rem 1.5rem;
     text-decoration: none;
     font-weight: 700;
@@ -116,7 +122,7 @@ header {
 }
 
 .cta-button-header:hover {
-    background-color: #333;
+    background-color: #c8a430;
 }
 
 .hamburger { display: none; }
@@ -129,12 +135,11 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--light-color);
-    /* IMAGEM PLACEHOLDER: Substituir por uma foto simbólica de alta qualidade (luz, vela, paisagem) */
+    color: var(--heading-color);
     background-image: url('https://images.unsplash.com/photo-1534444178922-38689c1004b3?q=80&w=2070');
     background-size: cover;
     background-position: center;
-    margin-top: 85px; /* Altura do cabeçalho */
+    margin-top: 85px; 
 }
 
 .hero-overlay {
@@ -143,7 +148,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro para legibilidade */
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay um pouco mais escuro */
 }
 
 .hero-content {
@@ -157,7 +162,7 @@ header {
     font-family: var(--font-heading);
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: var(--light-color);
+    color: var(--heading-color);
 }
 
 .hero p {
@@ -187,7 +192,7 @@ header {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra mais sutil no tema dark */
 }
 
 .content-text {
@@ -197,6 +202,7 @@ header {
 .content-text p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    opacity: 0.8; /* Texto do parágrafo um pouco mais suave */
 }
 
 .learn-more-link {
@@ -216,14 +222,14 @@ header {
 
 /* ---- SEÇÃO 3: CTA ---- */
 .cta-section {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: #111111; /* Preto um pouco mais puro para contraste */
+    color: var(--heading-color);
     text-align: center;
     padding: 6rem 2rem;
 }
 
 .cta-section h2 {
-    color: var(--light-color);
+    color: var(--primary-color); /* Título da CTA também em dourado */
 }
 
 .cta-section p {
@@ -234,7 +240,7 @@ header {
 
 /* ---- SEÇÃO 5: CONTATO ---- */
 .contact-section {
-    background-color: var(--light-gray);
+    background-color: var(--background-color);
     padding: 6rem 2rem;
     text-align: center;
 }
@@ -252,22 +258,26 @@ header {
 .contact-form input, .contact-form textarea {
     width: 100%;
     padding: 1rem;
-    border: 1px solid #ddd;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font-family: var(--font-body);
     font-size: 1rem;
+    color: var(--text-color);
 }
 .contact-form input:focus, .contact-form textarea:focus {
     outline: 2px solid var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 
 /* ---- RODAPÉ ---- */
 footer {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: #111111; /* Mesmo preto da seção CTA */
+    color: var(--text-color);
     text-align: center;
     padding: 4rem 2rem 2rem;
+    border-top: 1px solid var(--border-color);
 }
 .footer-logo img {
     height: 60px;
@@ -281,7 +291,7 @@ footer {
     gap: 2rem;
 }
 .footer-links a {
-    color: var(--light-color);
+    color: var(--text-color);
     text-decoration: none;
     opacity: 0.7;
     transition: opacity 0.3s;
@@ -293,7 +303,7 @@ footer {
     margin-bottom: 2rem;
 }
 .social-links a {
-    color: var(--light-color);
+    color: var(--text-color);
     font-size: 1.2rem;
     margin: 0 1rem;
     opacity: 0.7;
@@ -323,7 +333,7 @@ footer {
         width: 25px;
         height: 3px;
         margin: 5px 0;
-        background-color: var(--dark-color);
+        background-color: var(--text-color); /* Barras do hambúrguer em branco */
         transition: all 0.3s ease-in-out;
     }
     .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
@@ -334,11 +344,11 @@ footer {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 85px; /* Altura do header */
+        top: 85px; 
         left: 0;
         width: 100%;
-        background-color: var(--light-color);
-        box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+        background-color: var(--background-color);
+        box-shadow: 0 10px 10px rgba(0,0,0,0.2);
         padding: 1rem 0;
     }
     .nav-item { width: 100%; text-align: center; padding: 1rem 0; }
