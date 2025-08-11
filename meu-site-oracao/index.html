@@ -15,72 +15,120 @@
 <body>
 
     <header>
-        <nav class="navbar">
-            <a href="#" class="nav-logo"><img src="assets/images/logo.png" alt="Logotipo do Grupo de Oração"></a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#sobre" class="nav-link">Sobre Nós</a></li>
-                <li class="nav-item"><a href="#fundador" class="nav-link">O Fundador</a></li>
-                <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
-                <li class="nav-item"><a href="#" class="nav-link cta-button">Acessar Portal</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="nav-logo"><img src="assets/images/logo.png" alt="Logotipo do Grupo de Oração"></a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="#fundador" class="nav-link">O Fundador</a></li>
+                    <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link cta-button">Acessar Portal</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="hero hidden">
-            <h1>Um Legado de Fé, Uma Comunidade de Futuro.</h1>
-            <p>Descubra um espaço para fortalecer sua espiritualidade com propósito e conexão.</p>
-            <a href="#" class="cta-button-main">Faça Parte da Nossa Comunidade</a>
-        </section>
-
-        <section id="sobre" class="content-section-split hidden">
-            <div class="image-container">
-                <div class="image-placeholder"><p>Imagem do Grupo</p></div>
-            </div>
-            <div class="text-container">
-                <h2>Sobre o Nosso Grupo</h2>
-                <p>Somos uma comunidade vibrante, unida pelo propósito de aprofundar nossa fé e levar uma mensagem de esperança. Nossos encontros são pensados para todas as idades, combinando tradição com uma linguagem contemporânea e relevante para os dias de hoje.</p>
-                <a href="pages/sobre-completo.html" class="learn-more-button">Conheça Nossa História</a>
+        <section class="hero">
+            <div class="container hidden">
+                <h1>Um Legado de Fé, Uma Comunidade de Futuro.</h1>
+                <p>Descubra um espaço para fortalecer sua espiritualidade com propósito e conexão.</p>
+                <a href="#" class="cta-button-main">Faça Parte da Nossa Comunidade</a>
             </div>
         </section>
 
-        <section id="fundador" class="content-section-split hidden">
-            <div class="text-container">
-                <h2>O Fundador</h2>
-                <p>Conheça a trajetória inspiradora de quem deu início a este movimento. Uma história de dedicação, visão e fé que continua a impactar vidas e a guiar nossa comunidade em sua jornada espiritual.</p>
-                <a href="pages/fundador-biografia.html" class="learn-more-button">Ler Biografia</a>
-            </div>
-            <div class="image-container">
-                 <div class="image-placeholder"><p>Foto do Fundador</p></div>
+        <section id="sobre" class="content-section-split">
+            <div class="container hidden">
+                <div class="image-container">
+                    <div class="image-placeholder"><p>Imagem do Grupo</p></div>
+                </div>
+                <div class="text-container">
+                    <h2>Sobre o Nosso Grupo</h2>
+                    <p>Somos uma comunidade vibrante, unida pelo propósito de aprofundar nossa fé e levar uma mensagem de esperança. Nossos encontros são pensados para todas as idades, combinando tradição com uma linguagem contemporânea.</p>
+                    <a href="pages/sobre-completo.html" class="learn-more-button">Conheça Nossa História</a>
+                </div>
             </div>
         </section>
 
-        <section id="contato" class="content-section-contact hidden">
-            <h2>Fale Conosco</h2>
-            <p>Tem dúvidas, sugestões ou um pedido de oração? Envie sua mensagem.</p>
-            <form action="#" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
-                <button type="submit" class="submit-button">Enviar Mensagem</button>
-            </form>
+        <section id="fundador" class="content-section-split">
+            <div class="container hidden">
+                <div class="text-container">
+                    <h2>O Fundador</h2>
+                    <p>Conheça a trajetória inspiradora de quem deu início a este movimento. Uma história de dedicação, visão e fé que continua a impactar vidas e a guiar nossa comunidade em sua jornada espiritual.</p>
+                    <a href="pages/fundador-biografia.html" class="learn-more-button">Ler Biografia</a>
+                </div>
+                <div class="image-container">
+                    <div class="image-placeholder"><p>Foto do Fundador</p></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq" class="content-section-faq">
+            <div class="container hidden">
+                <h2>Perguntas Frequentes</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <p>Como posso participar dos encontros?</p>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>É muito simples! Todos os nossos encontros são abertos. Basta verificar nossa agenda para saber os dias e horários e aparecer. Você será muito bem-vindo(a)!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <p>Os encontros são apenas para pessoas mais velhas?</p>
+                             <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>De forma alguma! Nosso grupo é para todas as idades. Temos jovens, adultos e idosos compartilhando e crescendo juntos. A diversidade é a nossa força.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <p>Preciso ter alguma religião específica para participar?</p>
+                             <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nosso grupo é de base cristã, mas acolhemos de coração aberto qualquer pessoa que busque espiritualidade, paz e um senso de comunidade, independentemente de sua jornada de fé.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="content-section-contact">
+            <div class="container hidden">
+                <h2>Fale Conosco</h2>
+                <p>Tem dúvidas, sugestões ou um pedido de oração? Envie sua mensagem.</p>
+                <form action="#" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Seu nome" required>
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                    <button type="submit" class="submit-button">Enviar Mensagem</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p>"Uma frase inspiradora que represente o grupo."</p>
+                <p class="copyright">&copy; 2025 Nome do Grupo. Todos os direitos reservados.</p>
             </div>
-            <p>"Uma frase inspiradora que represente o grupo."</p>
-            <p class="copyright">&copy; 2025 Nome do Grupo. Todos os direitos reservados.</p>
         </div>
     </footer>
 
