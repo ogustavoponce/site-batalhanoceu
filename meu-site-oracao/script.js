@@ -1,22 +1,29 @@
 /* ---- SCRIPT DO MENU HAMBÚRGUER ---- */
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
-const navLinks = document.querySelectorAll(".nav-link");
 
-// Função para abrir/fechar o menu
-function toggleMenu() {
+hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-}
+});
 
-// Evento de clique no ícone do hambúrguer
-hamburger.addEventListener("click", toggleMenu);
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    // Fecha o menu ao clicar em um link
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}));
 
-// Evento para fechar o menu ao clicar em um link (útil para navegação na mesma página)
-navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        if (navMenu.classList.contains("active")) {
-            toggleMenu();
-        }
+
+/* ---- SCRIPT: ANIMAÇÃO AO ROLAR A PÁGINA ---- */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } 
+        // Descomente a linha abaixo se quiser que a animação aconteça toda vez que o elemento entra na tela
+        // else { entry.target.classList.remove('show'); }
     });
 });
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));

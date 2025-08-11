@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupo de Oração - Bem-vindo</title>
     <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -16,12 +18,13 @@
         <nav class="navbar">
             <a href="#" class="nav-logo"><img src="assets/images/logo.png" alt="Logotipo do Grupo de Oração"></a>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li class="nav-item"><a href="#fundador" class="nav-link">Fundador</a></li>
+                <li class="nav-item"><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                <li class="nav-item"><a href="#fundador" class="nav-link">O Fundador</a></li>
                 <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="#" class="nav-link cta-button">Acessar Portal</a></li>
             </ul>
-            <a href="#" class="cta-button-header">Acessar Portal</a>
             <div class="hamburger">
+                <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
@@ -29,69 +32,54 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1>Um lugar para encontrar, pertencer e crescer na fé.</h1>
-                <p>Junte-se a uma comunidade que acolhe e inspira.</p>
-                <a href="#sobre" class="cta-button-main">Conheça o Grupo</a>
+        <section class="hero hidden">
+            <h1>Um Legado de Fé, Uma Comunidade de Futuro.</h1>
+            <p>Descubra um espaço para fortalecer sua espiritualidade com propósito e conexão.</p>
+            <a href="#" class="cta-button-main">Faça Parte da Nossa Comunidade</a>
+        </section>
+
+        <section id="sobre" class="content-section-split hidden">
+            <div class="image-container">
+                <div class="image-placeholder"><p>Imagem do Grupo</p></div>
+            </div>
+            <div class="text-container">
+                <h2>Sobre o Nosso Grupo</h2>
+                <p>Somos uma comunidade vibrante, unida pelo propósito de aprofundar nossa fé e levar uma mensagem de esperança. Nossos encontros são pensados para todas as idades, combinando tradição com uma linguagem contemporânea e relevante para os dias de hoje.</p>
+                <a href="pages/sobre-completo.html" class="learn-more-button">Conheça Nossa História</a>
             </div>
         </section>
 
-        <section id="sobre" class="content-section layout-alternating">
-            <div class="content-image">
-                <img src="https://images.unsplash.com/photo-1579776957822-6b9a8e5b3f1b?q=80&w=1974" alt="Membros do grupo de oração em um momento de comunidade.">
+        <section id="fundador" class="content-section-split hidden">
+            <div class="text-container">
+                <h2>O Fundador</h2>
+                <p>Conheça a trajetória inspiradora de quem deu início a este movimento. Uma história de dedicação, visão e fé que continua a impactar vidas e a guiar nossa comunidade em sua jornada espiritual.</p>
+                <a href="pages/fundador-biografia.html" class="learn-more-button">Ler Biografia</a>
             </div>
-            <div class="content-text">
-                <h2>Nossa Missão.</h2>
-                <p>Somos mais que um grupo de oração; somos uma família unida pelo propósito de aprofundar nossa espiritualidade e servir ao próximo. Nossos encontros são um refúgio de paz e reflexão, abertos a todos que buscam uma conexão mais profunda.</p>
-                <a href="pages/sobre-completo.html" class="learn-more-link">Leia nossa história completa &rarr;</a>
+            <div class="image-container">
+                 <div class="image-placeholder"><p>Foto do Fundador</p></div>
             </div>
         </section>
 
-        <section class="cta-section">
-            <h2>Acesse nossa comunidade exclusiva.</h2>
-            <p>Tenha acesso a conteúdos, estudos, lives e um espaço para partilhar sua jornada.</p>
-            <a href="#" class="cta-button-main inverted">Entrar / Cadastrar-se</a>
-        </section>
-
-        <section id="fundador" class="content-section layout-alternating reverse">
-             <div class="content-image">
-                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974" alt="Retrato do fundador do grupo.">
-            </div>
-            <div class="content-text">
-                <h2>O Fundador.</h2>
-                <p>Guiado por uma visão de fé e comunidade, [Nome do Fundador] iniciou este trabalho com o objetivo de criar um espaço acolhedor e transformador. Sua dedicação continua a ser o pilar que sustenta e inspira cada um de nossos membros.</p>
-                <a href="pages/fundador-biografia.html" class="learn-more-link">Conheça o fundador &rarr;</a>
-            </div>
-        </section>
-        
-        <section id="contato" class="contact-section">
+        <section id="contato" class="content-section-contact hidden">
             <h2>Fale Conosco</h2>
-            <p>Sua mensagem é importante para nós. Envie suas dúvidas, sugestões ou pedidos de oração.</p>
+            <p>Tem dúvidas, sugestões ou um pedido de oração? Envie sua mensagem.</p>
             <form action="#" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="Seu nome" required>
                 <input type="email" name="email" placeholder="Seu e-mail" required>
-                <textarea name="message" rows="6" placeholder="Sua mensagem" required></textarea>
-                <button type="submit" class="cta-button-main">Enviar Mensagem</button>
+                <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                <button type="submit" class="submit-button">Enviar Mensagem</button>
             </form>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <a href="#" class="footer-logo"><img src="assets/images/logo.png" alt="Logotipo do Grupo de Oração"></a>
-            <div class="footer-links">
-                <a href="#sobre">Sobre</a>
-                <a href="#fundador">Fundador</a>
-                <a href="#contato">Contato</a>
-                <a href="#">Portal</a>
-            </div>
             <div class="social-links">
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
+            <p>"Uma frase inspiradora que represente o grupo."</p>
             <p class="copyright">&copy; 2025 Nome do Grupo. Todos os direitos reservados.</p>
         </div>
     </footer>
